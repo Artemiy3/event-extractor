@@ -16,16 +16,11 @@ import java.util.List;
 @RequestMapping("/api")
 public class EventExtractionController {
     @Autowired
-    EventExtractionService eventExtractionService;
+    private EventExtractionService eventExtractionService;
 
     @RequestMapping(value="/health", method= RequestMethod.GET)
     public String checkHealth() {
         return "I'm healthy!";
-    }
-
-    @RequestMapping(value="/example", method= RequestMethod.GET)
-    public Event getExampleEvent() {
-        return new Event("Example description", 123);
     }
 
     @RequestMapping(value="/extract/events", method= RequestMethod.GET)

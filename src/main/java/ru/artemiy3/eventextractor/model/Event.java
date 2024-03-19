@@ -5,11 +5,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Event {
-    private String description;
-    private int number;
+
+    List<Person> participants;
+    String action;
+    String place;
 }
